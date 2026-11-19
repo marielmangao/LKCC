@@ -19,35 +19,38 @@
 
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
-  --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #444444; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #37423b; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #5fcf80; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
-  --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
-  --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
+  --background-color: #0b132b; /* Background color for the entire website, including individual sections */
+  --default-color: #ffffff; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #ffd43b; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #1d4ed8; /* Regal blue accent color used for buttons, links, and key elements */
+  --yellow-color: #ffd43b; /* Secondary yellow text/highlight color */
+  --surface-color: #132043; /* Surface color used for cards and boxed elements */
+  --contrast-color: #ffffff; /* Contrast color for text on accent/dark backgrounds */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #272828;  /* The default color of the main navmenu links */
-  --nav-hover-color: #5fcf80; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #ffffff; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #ffffff; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #272828; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #5fcf80; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #ffffff;  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffd43b; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #0b132b; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #132043; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #ffffff; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffd43b; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
 
 .light-background {
-  --background-color: #f9f9f9;
-  --surface-color: #ffffff;
+  --background-color: #132043;
+  --surface-color: #1c2e5c;
+  --default-color: #ffffff;
+  --heading-color: #ffd43b;
 }
 
 .dark-background {
   --background-color: #060606;
   --default-color: #ffffff;
-  --heading-color: #ffffff;
+  --heading-color: #ffd43b;
   --surface-color: #252525;
   --contrast-color: #ffffff;
 }
@@ -67,13 +70,13 @@ body {
 }
 
 a {
-  color: var(--accent-color);
+  color: var(--yellow-color);
   text-decoration: none;
   transition: 0.3s;
 }
 
 a:hover {
-  color: color-mix(in srgb, var(--accent-color), transparent 25%);
+  color: color-mix(in srgb, var(--yellow-color), transparent 20%);
   text-decoration: none;
 }
 
@@ -102,7 +105,7 @@ h6 {
 .email-form .sent-message {
   display: none;
   color: #ffffff;
-  background: #059652;
+  background: var(--accent-color);
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -112,6 +115,7 @@ h6 {
 .email-form .loading {
   display: none;
   background: var(--surface-color);
+  color: var(--yellow-color);
   text-align: center;
   padding: 15px;
   margin-bottom: 24px;
@@ -124,7 +128,7 @@ h6 {
   width: 24px;
   height: 24px;
   margin: 0 10px -6px 0;
-  border: 3px solid var(--accent-color);
+  border: 3px solid var(--yellow-color);
   border-top-color: var(--surface-color);
   animation: email-form-loading 1s linear infinite;
 }
@@ -163,7 +167,7 @@ h6 {
   animation-timing-function: steps;
   opacity: 1;
   border-radius: 50%;
-  border: 5px solid color-mix(in srgb, var(--accent-color), transparent 30%);
+  border: 5px solid color-mix(in srgb, var(--yellow-color), transparent 30%);
   top: -15%;
   left: -15%;
   background: rgba(198, 16, 0, 0);
@@ -179,7 +183,7 @@ h6 {
   height: 0;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
+  border-left: 15px solid var(--yellow-color);
   z-index: 100;
   transition: all 400ms cubic-bezier(0.55, 0.055, 0.675, 0.19);
 }
@@ -195,7 +199,7 @@ h6 {
   border: none;
   border-top: 10px solid transparent;
   border-bottom: 10px solid transparent;
-  border-left: 15px solid #fff;
+  border-left: 15px solid var(--yellow-color);
   z-index: 200;
   animation: none;
   border-radius: 0;
@@ -244,7 +248,7 @@ h6 {
   margin: 0;
   letter-spacing: 1px;
   text-transform: uppercase;
-  color: var(--accent-color);
+  color: var(--yellow-color);
 }
 
 .header .btn-getstarted,
@@ -260,8 +264,8 @@ h6 {
 
 .header .btn-getstarted:hover,
 .header .btn-getstarted:focus:hover {
-  color: var(--contrast-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 15%);
+  color: var(--yellow-color);
+  background: color-mix(in srgb, var(--accent-color), black 15%);
 }
 
 @media (max-width: 1200px) {
@@ -281,7 +285,7 @@ h6 {
 }
 
 .scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.25);
 }
 
 /*--------------------------------------------------------------
@@ -350,7 +354,7 @@ h6 {
     transition: 0.3s;
     border-radius: 4px;
     z-index: 99;
-    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.2);
   }
 
   .navmenu .dropdown ul li {
@@ -419,7 +423,7 @@ h6 {
     margin: 0;
     border-radius: 6px;
     background-color: var(--nav-mobile-background-color);
-    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
     box-shadow: none;
     overflow-y: auto;
     transition: 0.3s;
@@ -452,13 +456,14 @@ h6 {
     justify-content: center;
     border-radius: 50%;
     transition: 0.3s;
-    background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
+    background-color: var(--accent-color);
+    color: var(--yellow-color);
   }
 
   .navmenu a i:hover,
   .navmenu a:focus i:hover {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+    background-color: var(--yellow-color);
+    color: var(--background-color);
   }
 
   .navmenu a:hover,
@@ -469,8 +474,8 @@ h6 {
 
   .navmenu .active i,
   .navmenu .active:focus i {
-    background-color: var(--accent-color);
-    color: var(--contrast-color);
+    background-color: var(--yellow-color);
+    color: var(--background-color);
     transform: rotate(180deg);
   }
 
@@ -485,12 +490,12 @@ h6 {
   }
 
   .navmenu .dropdown ul ul {
-    background-color: rgba(33, 37, 41, 0.1);
+    background-color: rgba(255, 255, 255, 0.05);
   }
 
   .navmenu .dropdown>.dropdown-active {
     display: block;
-    background-color: rgba(33, 37, 41, 0.03);
+    background-color: rgba(255, 255, 255, 0.03);
   }
 
   .mobile-nav-active {
@@ -498,7 +503,7 @@ h6 {
   }
 
   .mobile-nav-active .mobile-nav-toggle {
-    color: #fff;
+    color: var(--yellow-color);
     position: absolute;
     font-size: 32px;
     top: 15px;
@@ -511,7 +516,7 @@ h6 {
     position: fixed;
     overflow: hidden;
     inset: 0;
-    background: rgba(33, 37, 41, 0.8);
+    background: rgba(11, 19, 43, 0.9);
     transition: 0.3s;
   }
 
@@ -549,12 +554,13 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
   font-family: var(--heading-font);
-  color: var(--heading-color);
+  color: var(--yellow-color);
 }
 
 .footer .footer-about p {
   font-size: 14px;
   font-family: var(--heading-font);
+  color: var(--default-color);
 }
 
 .footer .social-links a {
@@ -564,16 +570,18 @@ h6 {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 50%);
+  border: 1px solid var(--accent-color);
+  background-color: var(--accent-color);
   font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: var(--yellow-color);
   margin-right: 10px;
   transition: 0.3s;
 }
 
 .footer .social-links a:hover {
-  color: var(--accent-color);
-  border-color: var(--accent-color);
+  color: var(--background-color);
+  background-color: var(--yellow-color);
+  border-color: var(--yellow-color);
 }
 
 .footer h4 {
@@ -581,6 +589,7 @@ h6 {
   font-weight: bold;
   position: relative;
   padding-bottom: 12px;
+  color: var(--yellow-color);
 }
 
 .footer .footer-links {
@@ -597,6 +606,7 @@ h6 {
   padding-right: 2px;
   font-size: 12px;
   line-height: 0;
+  color: var(--yellow-color);
 }
 
 .footer .footer-links ul li {
@@ -610,17 +620,18 @@ h6 {
 }
 
 .footer .footer-links ul a {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: var(--default-color);
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-links ul a:hover {
-  color: var(--accent-color);
+  color: var(--yellow-color);
 }
 
 .footer .footer-contact p {
   margin-bottom: 5px;
+  color: var(--default-color);
 }
 
 .footer .footer-newsletter .newsletter-form {
@@ -629,14 +640,14 @@ h6 {
   padding: 6px 8px;
   position: relative;
   border-radius: 50px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 80%);
+  border: 1px solid var(--accent-color);
   display: flex;
   background-color: var(--surface-color);
   transition: 0.3s;
 }
 
 .footer .footer-newsletter .newsletter-form:focus-within {
-  border-color: var(--accent-color);
+  border-color: var(--yellow-color);
 }
 
 .footer .footer-newsletter .newsletter-form input[type=email] {
@@ -657,28 +668,32 @@ h6 {
   padding: 0 20px 2px 20px;
   margin: -7px -8px -7px 0;
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--yellow-color);
   transition: 0.3s;
   border-radius: 50px;
 }
 
 .footer .footer-newsletter .newsletter-form input[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: var(--yellow-color);
+  color: var(--background-color);
 }
 
 .footer .copyright {
   padding-top: 25px;
   padding-bottom: 25px;
-  background-color: color-mix(in srgb, var(--default-color), transparent 95%);
+  background-color: var(--accent-color);
+  color: var(--default-color);
 }
 
 .footer .copyright p {
   margin-bottom: 0;
+  color: var(--default-color);
 }
 
 .footer .credits {
   margin-top: 6px;
   font-size: 13px;
+  color: var(--yellow-color);
 }
 
 /*--------------------------------------------------------------
@@ -698,8 +713,8 @@ h6 {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #ffffff;
-  border-color: var(--accent-color) transparent var(--accent-color) transparent;
+  border: 6px solid var(--surface-color);
+  border-color: var(--yellow-color) var(--accent-color) var(--yellow-color) var(--accent-color);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -735,13 +750,17 @@ h6 {
 
 .scroll-top i {
   font-size: 24px;
-  color: var(--contrast-color);
+  color: var(--yellow-color);
   line-height: 0;
 }
 
 .scroll-top:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 20%);
-  color: var(--contrast-color);
+  background-color: var(--yellow-color);
+  color: var(--background-color);
+}
+
+.scroll-top:hover i {
+  color: var(--background-color);
 }
 
 .scroll-top.active {
@@ -765,7 +784,7 @@ h6 {
 .page-title {
   --default-color: var(--contrast-color);
   --background-color: var(--accent-color);
-  --heading-color: var(--contrast-color);
+  --heading-color: var(--yellow-color);
   color: var(--default-color);
   background-color: var(--background-color);
   position: relative;
@@ -773,21 +792,22 @@ h6 {
 
 .page-title .heading {
   padding: 80px 0;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border-top: 1px solid color-mix(in srgb, var(--yellow-color), transparent 70%);
 }
 
 .page-title .heading h1 {
   font-size: 38px;
   font-weight: 700;
+  color: var(--yellow-color);
 }
 
 .page-title nav {
-  background-color: color-mix(in srgb, var(--accent-color) 90%, black 5%);
+  background-color: color-mix(in srgb, var(--accent-color) 85%, black 15%);
   padding: 20px 0;
 }
 
 .page-title nav a {
-  color: var(--default-color);
+  color: var(--yellow-color);
 }
 
 .page-title nav ol {
@@ -797,6 +817,7 @@ h6 {
   margin: 0;
   font-size: 16px;
   font-weight: 600;
+  color: var(--default-color);
 }
 
 .page-title nav ol li+li {
@@ -807,7 +828,7 @@ h6 {
   content: "/";
   display: inline-block;
   padding-right: 10px;
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
+  color: var(--yellow-color);
 }
 
 /*--------------------------------------------------------------
@@ -817,8 +838,9 @@ section,
 .section {
   color: var(--default-color);
   background-color: var(--background-color);
-  padding: 60px 0;
-  scroll-margin-top: 900px;
+  padding: 120px 0;
+  margin-bottom: 40px;
+  scroll-margin-top: 90px;
   overflow: clip;
 }
 
@@ -826,6 +848,8 @@ section,
 
   section,
   .section {
+    padding: 90px 0;
+    margin-bottom: 25px;
     scroll-margin-top: 66px;
   }
 }
@@ -846,7 +870,7 @@ section,
   margin: 0;
   letter-spacing: 1.5px;
   text-transform: uppercase;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
+  color: var(--yellow-color);
   position: relative;
 }
 
@@ -860,7 +884,7 @@ section,
 }
 
 .section-title p {
-  color: var(--heading-color);
+  color: var(--default-color);
   margin: 0;
   font-size: 36px;
   font-weight: 700;
@@ -876,6 +900,7 @@ section,
   min-height: 80vh;
   position: relative;
   padding: 80px 0;
+  margin-bottom: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -894,7 +919,7 @@ section,
 
 .hero:before {
   content: "";
-  background: color-mix(in srgb, var(--background-color), transparent 60%);
+  background: transparent;
   position: absolute;
   inset: 0;
   z-index: 2;
@@ -909,10 +934,11 @@ section,
   margin: 0;
   font-size: 48px;
   font-weight: 700;
+  color: var(--yellow-color);
 }
 
 .hero p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
+  color: var(--default-color);
   margin: 10px 0 0 0;
   font-size: 24px;
 }
@@ -926,13 +952,15 @@ section,
   border-radius: 50px;
   transition: 0.4s;
   margin-top: 30px;
-  border: 2px solid var(--default-color);
-  color: var(--default-color);
+  border: 2px solid var(--yellow-color);
+  color: var(--yellow-color);
+  background: var(--accent-color);
 }
 
 .hero .btn-get-started:hover {
-  background: var(--accent-color);
-  border: 2px solid var(--accent-color);
+  background: var(--yellow-color);
+  color: var(--background-color);
+  border: 2px solid var(--yellow-color);
 }
 
 @media (max-width: 768px) {
@@ -951,6 +979,7 @@ section,
 .about .content h3 {
   font-size: 2rem;
   font-weight: 700;
+  color: var(--yellow-color);
 }
 
 .about .content ul {
@@ -960,12 +989,13 @@ section,
 
 .about .content ul li {
   padding-bottom: 10px;
+  color: var(--default-color);
 }
 
 .about .content ul i {
   font-size: 1.25rem;
   margin-right: 4px;
-  color: var(--accent-color);
+  color: var(--yellow-color);
 }
 
 .about .content p:last-child {
@@ -974,7 +1004,7 @@ section,
 
 .about .content .read-more {
   background: var(--accent-color);
-  color: var(--contrast-color);
+  color: var(--yellow-color);
   font-family: var(--heading-font);
   font-weight: 500;
   font-size: 15px;
@@ -995,7 +1025,8 @@ section,
 }
 
 .about .content .read-more:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
+  background: var(--yellow-color);
+  color: var(--background-color);
   padding-right: 19px;
 }
 
@@ -1007,23 +1038,25 @@ section,
 # Counts Section
 --------------------------------------------------------------*/
 .counts {
-  padding: 25px 0;
+  padding: 110px 0;
 }
 
 .counts .stats-item {
   padding: 30px;
   width: 100%;
+  background-color: var(--surface-color);
+  border-radius: 8px;
 }
 
 .counts .stats-item span {
   font-size: 48px;
   display: block;
-  color: var(--accent-color);
+  color: var(--yellow-color);
   font-weight: 700;
 }
 
 .counts .stats-item p {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
+  color: var(--default-color);
   padding: 0;
   margin: 0;
   font-family: var(--heading-font);
@@ -1035,13 +1068,13 @@ section,
 # Why Us Section
 --------------------------------------------------------------*/
 .why-us .why-box {
-  color: var(--contrast-color);
+  color: var(--default-color);
   background: var(--accent-color);
   padding: 30px;
 }
 
 .why-us .why-box h3 {
-  color: var(--contrast-color);
+  color: var(--yellow-color);
   font-weight: 700;
   font-size: 34px;
   margin-bottom: 30px;
@@ -1049,13 +1082,15 @@ section,
 
 .why-us .why-box p {
   margin-bottom: 30px;
+  color: var(--default-color);
 }
 
 .why-us .why-box .more-btn {
   display: inline-block;
-  background: color-mix(in srgb, var(--contrast-color), transparent 85%);
+  background: var(--yellow-color);
   padding: 8px 40px 10px 40px;
-  color: var(--contrast-color);
+  color: var(--background-color);
+  font-weight: 600;
   transition: all ease-in-out 0.4s;
   border-radius: 50px;
 }
@@ -1065,8 +1100,8 @@ section,
 }
 
 .why-us .why-box .more-btn:hover {
-  color: var(--accent-color);
-  background: var(--surface-color);
+  color: var(--yellow-color);
+  background: var(--background-color);
 }
 
 .why-us .icon-box {
@@ -1075,15 +1110,15 @@ section,
   padding: 40px 30px;
   width: 100%;
   height: 100%;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid var(--accent-color);
 }
 
 .why-us .icon-box i {
-  color: var(--accent-color);
+  color: var(--yellow-color);
   font-size: 32px;
   margin-bottom: 30px;
-  background: color-mix(in srgb, var(--accent-color), transparent 95%);
-  border-radius: 50px;
+  background: var(--accent-color);
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1096,1151 +1131,286 @@ section,
   font-size: 20px;
   font-weight: 700;
   margin: 0 0 30px 0;
+  color: var(--yellow-color);
 }
 
 .why-us .icon-box p {
   font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
+  color: var(--default-color);
 }
 
 .why-us .icon-box:hover i {
-  color: var(--contrast-color);
-  background: var(--accent-color);
+  color: var(--background-color);
+  background: var(--yellow-color);
 }
 
 /*--------------------------------------------------------------
-# Features Section
+# KCCI Curved Infographic Roadmap History
+--------------------------------------------------------------*/
+.kcci-roadmap-section {
+  margin-top: 110px !important;
+  padding-top: 70px !important;
+  border-top: none;
+}
+
+.kcci-roadmap-section .section-title {
+  padding-bottom: 50px;
+}
+
+.kcci-roadmap-section .section-title h2::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  display: inline-block;
+  background: var(--accent-color);
+  margin: 4px 10px;
+}
+
+.kcci-roadmap-section .section-title h2::after {
+  width: 60px;
+}
+
+.roadmap-subtitle {
+  display: inline-block;
+  margin-top: 8px;
+  font-size: 15px;
+  font-style: italic;
+  color: color-mix(in srgb, var(--default-color), transparent 25%);
+}
+
+.kcci-roadmap {
+  position: relative;
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.roadmap-step {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 25px 0;
+}
+
+/* Text Blocks kept safely outside the central curve track */
+.roadmap-content {
+  width: 38%;
+  z-index: 3;
+  transition: transform 0.3s ease;
+}
+
+.roadmap-step:hover .roadmap-content {
+  transform: translateY(-4px);
+}
+
+.step-left .roadmap-content {
+  text-align: right;
+  padding-right: 20px;
+}
+
+.step-right .roadmap-content {
+  text-align: left;
+  padding-left: 20px;
+}
+
+.roadmap-spacer {
+  width: 38%;
+}
+
+/* Large Bold Infographic Year Title */
+.roadmap-year {
+  display: block;
+  font-family: var(--heading-font);
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--yellow-color);
+  margin-bottom: 8px;
+  letter-spacing: 0.5px;
+}
+
+.roadmap-content h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--default-color);
+  margin-bottom: 8px;
+}
+
+.roadmap-content p {
+  font-size: 14px;
+  line-height: 1.65;
+  color: color-mix(in srgb, var(--default-color), transparent 15%);
+  margin-bottom: 0;
+}
+
+/* Central Circular Icon Node (24% wide buffer zone) */
+.roadmap-node {
+  position: relative;
+  width: 24%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 3;
+}
+
+.node-circle {
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: linear-gradient(145deg, var(--surface-color), var(--accent-color));
+  border: 4px solid var(--yellow-color);
+  box-shadow: 0 0 0 8px var(--background-color), 0 8px 20px rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.node-circle i {
+  font-size: 30px;
+  color: var(--yellow-color);
+  transition: color 0.3s ease;
+}
+
+.roadmap-step:hover .node-circle {
+  transform: scale(1.1);
+  background: var(--yellow-color);
+}
+
+.roadmap-step:hover .node-circle i {
+  color: var(--background-color);
+}
+
+/* Curved S-Bend Connecting Path (Confined inside the 24% central buffer) */
+.roadmap-step:not(.step-last)::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 95px;
+  height: 100%;
+  border: 6px solid var(--accent-color);
+  z-index: 1;
+  pointer-events: none;
+  transition: border-color 0.3s ease;
+}
+
+/* Curve bows right into the open spacer on left-text rows */
+.step-left:not(.step-last)::before {
+  left: 50%;
+  border-left: none;
+  border-radius: 0 95px 95px 0;
+}
+
+/* Curve bows left into the open spacer on right-text rows */
+.step-right:not(.step-last)::before {
+  right: 50%;
+  border-right: none;
+  border-radius: 95px 0 0 95px;
+}
+
+.roadmap-step:hover:not(.step-last)::before {
+  border-color: color-mix(in srgb, var(--yellow-color), var(--accent-color) 40%);
+}
+
+/* Mobile Responsive Vertical Roadmap */
+@media (max-width: 991px) {
+  .kcci-roadmap::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    left: 38px;
+    width: 4px;
+    background: var(--accent-color);
+    z-index: 1;
+  }
+
+  .roadmap-step {
+    flex-direction: row !important;
+    justify-content: flex-start;
+    min-height: auto;
+    padding: 18px 0;
+  }
+
+  .roadmap-step:not(.step-last)::before,
+  .roadmap-spacer {
+    display: none;
+  }
+
+  .roadmap-node {
+    order: 1;
+    width: 78px;
+    flex-shrink: 0;
+  }
+
+  .node-circle {
+    width: 62px;
+    height: 62px;
+  }
+
+  .node-circle i {
+    font-size: 24px;
+  }
+
+  .roadmap-content {
+    order: 2;
+    width: calc(100% - 78px);
+    text-align: left !important;
+    padding-left: 20px !important;
+    padding-right: 10px !important;
+  }
+
+  .roadmap-year {
+    font-size: 24px;
+  }
+}
+
+/*--------------------------------------------------------------
+# Features / Academic Departments Section
 --------------------------------------------------------------*/
 .features {
-  padding: 10px 0;
+  padding: 110px 0;
 }
 
 .features .features-item {
   background-color: var(--surface-color);
   display: flex;
   align-items: center;
-  padding: 20px;
+  padding: 22px 20px;
+  border-radius: 8px;
   transition: 0.3s;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 35%);
   position: relative;
 }
 
 .features .features-item i {
   font-size: 32px;
-  padding-right: 10px;
+  padding-right: 14px;
   line-height: 0;
+  color: var(--yellow-color);
 }
 
 .features .features-item h3 {
   font-weight: 700;
   margin: 0;
   padding: 0;
-  line-height: 1;
-  font-size: 16px;
+  line-height: 1.2;
+  font-size: 17px;
 }
 
 .features .features-item h3 a {
-  color: var(--heading-color);
+  color: var(--default-color);
   transition: 0.3s;
 }
 
 .features .features-item:hover {
-  border-color: var(--accent-color);
+  border-color: var(--yellow-color);
+  background-color: var(--accent-color);
+  transform: translateY(-4px);
 }
 
 .features .features-item:hover h3 a {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Courses Section
---------------------------------------------------------------*/
-.courses .course-item {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 5px;
-}
-
-.courses .course-content {
-  padding: 15px;
-}
-
-.courses .course-content h3 {
-  font-weight: 700;
-  font-size: 20px;
-}
-
-.courses .course-content h3 a {
-  color: var(--heading-color);
-  transition: 0.3s;
-}
-
-.courses .course-content h3 a:hover {
-  color: var(--accent-color);
-}
-
-.courses .course-content .category {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  font-size: 14px;
-  padding: 6px 14px;
-  margin: 0;
-  border-radius: 5px;
-}
-
-.courses .course-content .price {
-  margin: 0;
-  font-weight: 700;
-  font-size: 18px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.courses .course-content .description {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.courses .trainer {
-  padding-top: 15px;
-  border-top: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.courses .trainer .trainer-profile img {
-  max-width: 50px;
-  border-radius: 50px;
-}
-
-.courses .trainer .trainer-profile .trainer-link {
-  padding-left: 10px;
-  font-weight: 600;
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  transition: 0.3s;
-}
-
-.courses .trainer .trainer-profile .trainer-link:hover {
-  color: var(--accent-color);
-}
-
-.courses .trainer .trainer-rank {
-  font-size: 18px;
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-}
-
-.courses .trainer .trainer-rank .user-icon {
-  font-size: 22px;
-}
-
-/*--------------------------------------------------------------
-# Trainers Index Section
---------------------------------------------------------------*/
-.trainers-index .member {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.trainers-index .member img {
-  margin: -1px -1px 30px -1px;
-}
-
-.trainers-index .member .member-content {
-  padding: 0 20px 30px 20px;
-}
-
-.trainers-index .member h4 {
-  font-weight: 700;
-  margin-bottom: 2px;
-  font-size: 18px;
-}
-
-.trainers-index .member span {
-  font-style: italic;
-  display: block;
-  font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.trainers-index .member p {
-  padding-top: 10px;
-  font-size: 14px;
-  font-style: italic;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.trainers-index .member .social {
-  margin-top: 15px;
-}
-
-.trainers-index .member .social a {
-  color: color-mix(in srgb, var(--default-color), transparent 60%);
-  transition: 0.3s;
-}
-
-.trainers-index .member .social a:hover {
-  color: var(--accent-color);
-}
-
-.trainers-index .member .social i {
-  font-size: 18px;
-  margin: 0 2px;
-}
-
-/*--------------------------------------------------------------
-# About Us Section
---------------------------------------------------------------*/
-.about-us .content h3 {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.about-us .content ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about-us .content ul li {
-  padding-bottom: 10px;
-}
-
-.about-us .content ul i {
-  font-size: 1.25rem;
-  margin-right: 4px;
-  color: var(--accent-color);
-}
-
-.about-us .content p:last-child {
-  margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Testimonials Section
---------------------------------------------------------------*/
-.testimonials .testimonial-wrap {
-  padding-left: 50px;
-}
-
-.testimonials .testimonials-carousel,
-.testimonials .testimonials-slider {
-  overflow: hidden;
-}
-
-.testimonials .testimonial-item {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  box-sizing: content-box;
-  padding: 30px 30px 30px 60px;
-  margin: 30px 15px;
-  min-height: 200px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .testimonial-img {
-  width: 90px;
-  border-radius: 10px;
-  border: 6px solid var(--background-color);
-  position: absolute;
-  left: -45px;
-}
-
-.testimonials .testimonial-item h3 {
-  font-size: 18px;
-  font-weight: bold;
-  margin: 10px 0 5px 0;
-}
-
-.testimonials .testimonial-item h4 {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 14px;
-  margin: 0;
-}
-
-.testimonials .testimonial-item .stars {
-  margin: 10px 0;
-}
-
-.testimonials .testimonial-item .stars i {
-  color: #ffc107;
-  margin: 0 1px;
-}
-
-.testimonials .testimonial-item .quote-icon-left,
-.testimonials .testimonial-item .quote-icon-right {
-  color: color-mix(in srgb, var(--accent-color), transparent 60%);
-  font-size: 26px;
-  line-height: 0;
-}
-
-.testimonials .testimonial-item .quote-icon-left {
-  display: inline-block;
-  left: -5px;
-  position: relative;
-}
-
-.testimonials .testimonial-item .quote-icon-right {
-  display: inline-block;
-  right: -5px;
-  position: relative;
-  top: 10px;
-  transform: scale(-1, -1);
-}
-
-.testimonials .testimonial-item p {
-  font-style: italic;
-  margin: 15px auto 15px auto;
-}
-
-.testimonials .swiper-wrapper {
-  height: auto;
-}
-
-.testimonials .swiper-pagination {
-  margin-top: 20px;
-  position: relative;
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet {
-  width: 12px;
-  height: 12px;
-  background-color: var(--background-color);
-  opacity: 1;
-  border: 1px solid var(--accent-color);
-}
-
-.testimonials .swiper-pagination .swiper-pagination-bullet-active {
-  background-color: var(--accent-color);
-}
-
-@media (max-width: 767px) {
-  .testimonials .testimonial-wrap {
-    padding-left: 0;
-  }
-
-  .testimonials .testimonials-carousel,
-  .testimonials .testimonials-slider {
-    overflow: hidden;
-  }
-
-  .testimonials .testimonial-item {
-    padding: 30px;
-    margin: 15px;
-  }
-
-  .testimonials .testimonial-item .testimonial-img {
-    position: static;
-    left: auto;
-  }
-}
-
-/*--------------------------------------------------------------
-# Course Details Section
---------------------------------------------------------------*/
-.course-details .course-header {
-  margin-bottom: 40px;
-}
-
-.course-details .course-header .course-image {
-  margin-bottom: 20px;
-  border-radius: 12px;
-  overflow: hidden;
-}
-
-.course-details .course-header .course-image img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-}
-
-.course-details .course-header .course-meta {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-@media (max-width: 768px) {
-  .course-details .course-header .course-meta {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-
-.course-details .course-header .instructor {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.course-details .course-header .instructor .instructor-avatar {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-}
-
-.course-details .course-header .instructor .instructor-info h6 {
-  margin: 0;
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--heading-color);
-}
-
-.course-details .course-header .instructor .instructor-info span {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.course-details .course-header .course-stats {
-  display: flex;
-  gap: 25px;
-}
-
-@media (max-width: 576px) {
-  .course-details .course-header .course-stats {
-    flex-wrap: wrap;
-    gap: 15px;
-  }
-}
-
-.course-details .course-header .course-stats .stat-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  font-size: 14px;
-  color: var(--default-color);
-}
-
-.course-details .course-header .course-stats .stat-item i {
-  color: var(--accent-color);
-}
-
-.course-details .course-content {
-  margin-bottom: 50px;
-}
-
-.course-details .course-content h2 {
-  font-size: 32px;
-  margin-bottom: 25px;
-  color: var(--heading-color);
-}
-
-@media (max-width: 768px) {
-  .course-details .course-content h2 {
-    font-size: 26px;
-  }
-}
-
-.course-details .course-content .course-description {
-  margin-bottom: 40px;
-}
-
-.course-details .course-content .course-description p {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 15px;
-  color: var(--default-color);
-}
-
-.course-details .course-content .what-you-learn {
-  background-color: var(--surface-color);
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.course-details .course-content .what-you-learn h3 {
-  font-size: 24px;
-  margin-bottom: 25px;
-  color: var(--heading-color);
-}
-
-.course-details .course-content .what-you-learn .learn-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.course-details .course-content .what-you-learn .learn-list li {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  margin-bottom: 15px;
-  font-size: 15px;
-  line-height: 1.6;
-  color: var(--default-color);
-}
-
-.course-details .course-content .what-you-learn .learn-list li i {
-  color: var(--accent-color);
-  font-size: 18px;
-  margin-top: 2px;
-  flex-shrink: 0;
-}
-
-.course-details .course-curriculum {
-  margin-bottom: 50px;
-}
-
-.course-details .course-curriculum h3 {
-  font-size: 24px;
-  margin-bottom: 30px;
-  color: var(--heading-color);
-}
-
-.course-details .course-curriculum .curriculum-section {
-  margin-bottom: 25px;
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.course-details .course-curriculum .curriculum-section .section-header {
-  background-color: var(--surface-color);
-  padding: 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-@media (max-width: 576px) {
-  .course-details .course-curriculum .curriculum-section .section-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 10px;
-  }
-}
-
-.course-details .course-curriculum .curriculum-section .section-header h4 {
-  font-size: 18px;
-  margin: 0;
-  color: var(--heading-color);
-}
-
-.course-details .course-curriculum .curriculum-section .section-header .lessons-count {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.course-details .course-curriculum .curriculum-section .lessons {
-  padding: 0;
-}
-
-.course-details .course-curriculum .curriculum-section .lessons .lesson-item {
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
-  transition: background-color 0.3s;
-}
-
-.course-details .course-curriculum .curriculum-section .lessons .lesson-item:hover {
-  background-color: color-mix(in srgb, var(--accent-color), transparent 95%);
-}
-
-.course-details .course-curriculum .curriculum-section .lessons .lesson-item:last-child {
-  border-bottom: none;
-}
-
-.course-details .course-curriculum .curriculum-section .lessons .lesson-item .lesson-info {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.course-details .course-curriculum .curriculum-section .lessons .lesson-item .lesson-info i {
-  color: var(--accent-color);
-  font-size: 18px;
-}
-
-.course-details .course-curriculum .curriculum-section .lessons .lesson-item .lesson-info span {
-  font-size: 15px;
-  color: var(--default-color);
-}
-
-.course-details .course-curriculum .curriculum-section .lessons .lesson-item .lesson-duration {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-weight: 500;
-}
-
-.course-details .course-sidebar {
-  position: sticky;
-  top: 100px;
-}
-
-.course-details .course-sidebar .pricing-card {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 12px;
-  padding: 30px;
-  text-align: center;
-  margin-bottom: 30px;
-  box-shadow: 0 5px 20px color-mix(in srgb, var(--default-color), transparent 90%);
-}
-
-.course-details .course-sidebar .pricing-card .price {
-  margin-bottom: 10px;
-}
-
-.course-details .course-sidebar .pricing-card .price .currency {
-  font-size: 24px;
-  font-weight: 600;
-  color: var(--accent-color);
-  vertical-align: top;
-}
-
-.course-details .course-sidebar .pricing-card .price .amount {
-  font-size: 48px;
-  font-weight: 700;
-  color: var(--accent-color);
-}
-
-.course-details .course-sidebar .pricing-card .price .period {
-  font-size: 16px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-}
-
-.course-details .course-sidebar .pricing-card .original-price {
-  font-size: 18px;
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  text-decoration: line-through;
-  margin-bottom: 25px;
-}
-
-.course-details .course-sidebar .pricing-card .course-features {
-  margin-bottom: 30px;
-}
-
-.course-details .course-sidebar .pricing-card .course-features .feature {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-bottom: 12px;
-  text-align: left;
-}
-
-.course-details .course-sidebar .pricing-card .course-features .feature i {
-  color: var(--accent-color);
-  font-size: 16px;
-  width: 16px;
-}
-
-.course-details .course-sidebar .pricing-card .course-features .feature span {
-  font-size: 14px;
-  color: var(--default-color);
-}
-
-.course-details .course-sidebar .pricing-card .btn-enroll {
-  width: 100%;
-  padding: 15px;
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  margin-bottom: 15px;
-  transition: all 0.3s;
-}
-
-.course-details .course-sidebar .pricing-card .btn-enroll:hover {
-  background-color: color-mix(in srgb, var(--accent-color), black 10%);
-  transform: translateY(-2px);
-}
-
-.course-details .course-sidebar .pricing-card .btn-preview {
-  width: 100%;
-  padding: 15px;
-  background-color: transparent;
-  color: var(--accent-color);
-  border: 2px solid var(--accent-color);
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  transition: all 0.3s;
-}
-
-.course-details .course-sidebar .pricing-card .btn-preview:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.course-details .course-sidebar .course-info-card {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 12px;
-  padding: 25px;
-  margin-bottom: 30px;
-}
-
-.course-details .course-sidebar .course-info-card h4 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: var(--heading-color);
-}
-
-.course-details .course-sidebar .course-info-card .info-item {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 12px;
-  padding-bottom: 12px;
-  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 95%);
-}
-
-.course-details .course-sidebar .course-info-card .info-item:last-child {
-  margin-bottom: 0;
-  padding-bottom: 0;
-  border-bottom: none;
-}
-
-.course-details .course-sidebar .course-info-card .info-item .label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--default-color);
-}
-
-.course-details .course-sidebar .course-info-card .info-item .value {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.course-details .course-sidebar .course-tags {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 12px;
-  padding: 25px;
-}
-
-.course-details .course-sidebar .course-tags h4 {
-  font-size: 18px;
-  margin-bottom: 20px;
-  color: var(--heading-color);
-}
-
-.course-details .course-sidebar .course-tags .tags-list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-}
-
-.course-details .course-sidebar .course-tags .tags-list .tag {
-  padding: 6px 12px;
-  background-color: color-mix(in srgb, var(--accent-color), transparent 90%);
-  color: var(--accent-color);
-  border-radius: 20px;
-  font-size: 12px;
-  font-weight: 500;
-  transition: all 0.3s;
-}
-
-.course-details .course-sidebar .course-tags .tags-list .tag:hover {
-  background-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-@media (max-width: 768px) {
-  .course-details .course-sidebar {
-    position: static;
-    margin-top: 40px;
-  }
-}
-
-/*--------------------------------------------------------------
-# Tabs Section
---------------------------------------------------------------*/
-.tabs {
-  padding-top: 30;
-}
-
-.tabs .nav-tabs {
-  border: 0;
-}
-
-.tabs .nav-link {
-  background-color: var(--background-color);
-  border: 0;
-  padding: 12px 15px;
-  transition: 0.3s;
-  color: var(--default-color);
-  border-radius: 0;
-  border-right: 2px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  font-weight: 600;
-  font-size: 15px;
-}
-
-.tabs .nav-link:hover {
-  color: var(--accent-color);
-}
-
-.tabs .nav-link.active {
-  background-color: var(--surface-color);
-  color: var(--accent-color);
-  border-color: var(--accent-color);
-}
-
-.tabs .tab-pane.active {
-  animation: fadeIn 0.5s ease-out;
-}
-
-.tabs .details h3 {
-  font-size: 26px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
-
-.tabs .details p {
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-}
-
-.tabs .details p:last-child {
-  margin-bottom: 0;
-}
-
-@media (max-width: 992px) {
-  .tabs .nav-link {
-    border: 0;
-    padding: 15px;
-  }
-
-  .tabs .nav-link.active {
-    color: var(--accent-color);
-    background: var(--accent-color);
-  }
-}
-
-/*--------------------------------------------------------------
-# Trainers Section
---------------------------------------------------------------*/
-.trainers .member {
-  position: relative;
-}
-
-.trainers .member .member-img {
-  margin: 0 80px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-}
-
-@media (max-width: 1024px) {
-  .trainers .member .member-img {
-    margin: 0 60px;
-  }
-}
-
-.trainers .member .member-img img {
-  position: relative;
-  z-index: 1;
-}
-
-.trainers .member .member-img .social {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 2;
-  padding-bottom: 20px;
-  transition: 0.3s;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.trainers .member .member-img .social a {
-  transition: 0.3s;
-  color: var(--contrast-color);
-  font-size: 20px;
-  margin: 0 8px;
-}
-
-.trainers .member .member-img .social a:hover {
-  color: var(--accent-color);
-}
-
-.trainers .member .member-info {
-  margin-top: 30px;
-}
-
-.trainers .member .member-info h4 {
-  font-weight: 700;
-  margin-bottom: 6px;
-  font-size: 18px;
-}
-
-.trainers .member .member-info span {
-  font-style: italic;
-  display: block;
-  font-size: 15px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 10px;
-}
-
-.trainers .member .member-info p {
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.trainers .member:hover .member-img .social {
-  padding-bottom: 0;
-  visibility: visible;
-  opacity: 1;
-}
-
-/*--------------------------------------------------------------
-# Events Section
---------------------------------------------------------------*/
-.events .card {
-  background-color: var(--background-color);
-  border: 0;
-  padding: 0 30px;
-  margin-bottom: 60px;
-  position: relative;
-}
-
-.events .card-img {
-  width: calc(100% + 60px);
-  margin-left: -30px;
-  overflow: hidden;
-  z-index: 9;
-  border-radius: 0;
-}
-
-.events .card-img img {
-  max-width: 100%;
-  transition: all 0.3s ease-in-out;
-}
-
-.events .card-body {
-  z-index: 10;
-  background: var(--surface-color);
-  border-top: 4px solid var(--surface-color);
-  padding: 30px;
-  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
-  margin-top: -60px;
-  transition: 0.3s;
-}
-
-.events .card-title {
-  font-weight: 700;
-  text-align: center;
-  margin-bottom: 20px;
-}
-
-.events .card-title a {
-  color: var(--default-color);
-  transition: 0.3s;
-}
-
-.events .card-text {
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-.events .card:hover img {
-  transform: scale(1.1);
-}
-
-.events .card:hover .card-body {
-  border-color: var(--accent-color);
-}
-
-.events .card:hover .card-body .card-title a {
-  color: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Pricing Section
---------------------------------------------------------------*/
-.pricing .pricing-item {
-  background-color: var(--surface-color);
-  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  text-align: center;
-  border-radius: 5px;
-  position: relative;
-  overflow: hidden;
-}
-
-.pricing .pricing-item h3 {
-  margin: -20px -20px 20px -20px;
-  padding: 20px 15px;
-  font-size: 16px;
-  font-weight: 600;
-  color: color-mix(in srgb, var(--default-color), transparent 20%);
-  background: color-mix(in srgb, var(--default-color), transparent 95%);
-}
-
-.pricing .pricing-item h4 {
-  font-size: 36px;
-  font-weight: 600;
-  font-family: var(--heading-font);
-}
-
-.pricing .pricing-item h4 sup {
-  font-size: 20px;
-  top: -15px;
-  left: -3px;
-}
-
-.pricing .pricing-item h4 span {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  font-size: 16px;
-  font-weight: 300;
-}
-
-.pricing .pricing-item ul {
-  padding: 15px 0;
-  list-style: none;
-  text-align: center;
-  line-height: 20px;
-  font-size: 14px;
-}
-
-.pricing .pricing-item ul li {
-  padding-bottom: 16px;
-}
-
-.pricing .pricing-item ul i {
-  color: var(--accent-color);
-  font-size: 18px;
-  padding-right: 4px;
-}
-
-.pricing .pricing-item ul .na {
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  text-decoration: line-through;
-}
-
-.pricing .btn-wrap {
-  background: color-mix(in srgb, var(--default-color), transparent 95%);
-  margin: 0 -20px -20px -20px;
-  padding: 20px 15px;
-  text-align: center;
-}
-
-.pricing .btn-buy {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  display: inline-block;
-  padding: 8px 35px 10px 35px;
-  border-radius: 4px;
-  transition: none;
-  font-size: 14px;
-  font-weight: 400;
-  font-family: var(--heading-font);
-  font-weight: 600;
-  transition: 0.3s;
-}
-
-.pricing .btn-buy:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-.pricing .featured h3 {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.pricing .advanced {
-  background: var(--accent-color);
-  color: var(--contrast-color);
-  width: 200px;
-  position: absolute;
-  top: 18px;
-  right: -68px;
-  transform: rotate(45deg);
-  z-index: 1;
-  font-size: 14px;
-  padding: 1px 0 3px 0;
-}
-
-/*--------------------------------------------------------------
-# Contact Section
---------------------------------------------------------------*/
-.contact {
-  padding-top: 8px;
-  padding-bottom: 40px;
-}
-
-.contact .info-item+.info-item {
-  margin-top: 40px;
-}
-
-.contact .info-item i {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  font-size: 20px;
-  width: 48px;
-  height: 48px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50px;
-  transition: all 0.3s ease-in-out;
-  margin-right: 15px;
-}
-
-.contact .info-item h3 {
-  padding: 0;
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 5px;
-}
-
-.contact .info-item p {
-  padding: 0;
-  margin-bottom: 0;
-  font-size: 14px;
-}
-
-.contact .email-form {
-  height: 100%;
-}
-
-.contact .email-form input[type=text],
-.contact .email-form input[type=email],
-.contact .email-form textarea {
-  font-size: 14px;
-  padding: 10px 15px;
-  box-shadow: none;
-  border-radius: 0;
-  color: var(--default-color);
-  background-color: color-mix(in srgb, var(--background-color), transparent 50%);
-  border-color: color-mix(in srgb, var(--default-color), transparent 80%);
-}
-
-.contact .email-form input[type=text]:focus,
-.contact .email-form input[type=email]:focus,
-.contact .email-form textarea:focus {
-  border-color: var(--accent-color);
-}
-
-.contact .email-form input[type=text]::placeholder,
-.contact .email-form input[type=email]::placeholder,
-.contact .email-form textarea::placeholder {
-  color: color-mix(in srgb, var(--default-color), transparent 70%);
-}
-
-.contact .email-form button[type=submit] {
-  color: var(--contrast-color);
-  background: var(--accent-color);
-  border: 0;
-  padding: 10px 30px 12px 30px;
-  transition: 0.4s;
-  border-radius: 50px;
-}
-
-.contact .email-form button[type=submit]:hover {
-  background: color-mix(in srgb, var(--accent-color), transparent 20%);
-}
-
-/*--------------------------------------------------------------
-# Starter Section Section
---------------------------------------------------------------*/
-.starter-section {
-  /* Add your styles here */
+  color: var(--yellow-color);
 }
