@@ -44,7 +44,7 @@
       <a href="index.html" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <!-- <img src="assets/img/logo.webp" alt=""> -->
-        <h1 class="sitename">Mentor</h1>
+        <h1 class="sitename">KCC</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
@@ -52,7 +52,6 @@
           <li><a href="index.html">Home<br></a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="academics.html">Academics</a></li>
-          <li><a href="trainers.html">Trainers</a></li>
           <li><a href="events.html" class="active">Events</a></li>
           <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -78,94 +77,483 @@
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Events Section -->
-    <section id="events" class="events section">
+<!-- =================================
+     EVENTS AND ACTIVITIES
+================================= -->
+<section id="events" class="events-section">
 
-      <div class="container" data-aos="fade-up">
+    <div class="events-heading">
+        <h1>Events &amp; Activities</h1>
+        <p>
+            Discover the memorable moments, achievements, and
+            meaningful experiences that bring the KCC community together.
+            From academic milestones to spiritual celebrations,
+            every event reflects our commitment to learning, faith, and service.
+        </p>
+    </div>
 
-        <div class="row">
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/event/event-item-1.webp" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Introduction to webdesign</a></h5>
-                <p class="fst-italic text-center">Sunday, September 26th at 7:00 pm</p>
-                <p class="card-text">Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat</p>
-              </div>
+
+    <!-- =================================
+         FEATURED EVENTS CAROUSEL
+    ================================= -->
+    <section id="featured-events" class="featured-events">
+
+        <div class="carousel-container">
+
+            <div class="carousel-track" id="eventCarousel">
+
+                <!-- SLIDE 1 -->
+                <div class="carousel-slide active">
+                    <img src="images/events/cmat-pinning-2025.jpg"
+                         alt="CMAT Pinning 2025">
+
+                    <div class="carousel-overlay">
+                        <span>ACADEMIC EVENTS</span>
+                        <h2>CMAT Pinning 2025</h2>
+                        <p>
+                            Celebrating the dedication and accomplishments
+                            of future professionals as they take an important
+                            step toward their chosen careers.
+                        </p>
+                        <a href="#cmat-pinning" class="carousel-btn">
+                            Explore Event
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 2 -->
+                <div class="carousel-slide">
+                    <img src="images/events/dinalagan-2025.jpg"
+                         alt="DINALAGAN 2025">
+
+                    <div class="carousel-overlay">
+                        <span>COMMUNITY AND OUTREACH PROGRAMS</span>
+                        <h2>DINALAGAN 2025</h2>
+                        <p>
+                            Promoting mental health awareness and
+                            encouraging a healthier, more supportive
+                            community through meaningful participation.
+                        </p>
+                        <a href="#dinalagan" class="carousel-btn">
+                            Explore Event
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 3 -->
+                <div class="carousel-slide">
+                    <img src="images/events/holy-spirit-mass.jpg"
+                         alt="Holy Spirit Mass">
+
+                    <div class="carousel-overlay">
+                        <span>SPIRITUAL ACTIVITIES</span>
+                        <h2>Holy Spirit Mass</h2>
+                        <p>
+                            Beginning the academic year in prayer,
+                            gratitude, and faith as the KCC community
+                            seeks the guidance of the Holy Spirit.
+                        </p>
+                        <a href="#holy-spirit-mass" class="carousel-btn">
+                            Explore Event
+                        </a>
+                    </div>
+                </div>
+
+                <!-- SLIDE 4 -->
+                <div class="carousel-slide">
+                    <img src="images/events/district-sports-meet-2025.jpg"
+                         alt="District Sports Meet 2025">
+
+                    <div class="carousel-overlay">
+                        <span>SPORTS AND ATHLETICS</span>
+                        <h2>District Sports Meet 2025</h2>
+                        <p>
+                            Showcasing athletic talent, teamwork,
+                            determination, and sportsmanship among
+                            participating student-athletes.
+                        </p>
+                        <a href="#district-sports-meet"
+                           class="carousel-btn">
+                            Explore Event
+                        </a>
+                    </div>
+                </div>
+
             </div>
-          </div>
-          <div class="col-md-6 d-flex align-items-stretch">
-            <div class="card">
-              <div class="card-img">
-                <img src="assets/img/event/event-item-2.webp" alt="...">
-              </div>
-              <div class="card-body">
-                <h5 class="card-title"><a href="">Marketing Strategies</a></h5>
-                <p class="fst-italic text-center">Sunday, November 15th at 7:00 pm</p>
-                <p class="card-text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo</p>
-              </div>
+
+            <!-- CAROUSEL BUTTONS -->
+            <button class="carousel-arrow prev"
+                    id="prevSlide"
+                    aria-label="Previous event">
+                &#10094;
+            </button>
+
+            <button class="carousel-arrow next"
+                    id="nextSlide"
+                    aria-label="Next event">
+                &#10095;
+            </button>
+
+            <!-- CAROUSEL INDICATORS -->
+            <div class="carousel-indicators" id="carouselIndicators">
+                <button class="indicator active"
+                        aria-label="Show slide 1"></button>
+                <button class="indicator"
+                        aria-label="Show slide 2"></button>
+                <button class="indicator"
+                        aria-label="Show slide 3"></button>
+                <button class="indicator"
+                        aria-label="Show slide 4"></button>
             </div>
 
-          </div>
+        </div>
+    </section>
+
+
+    <!-- =================================
+         ACADEMIC EVENTS
+    ================================= -->
+    <section id="academic-events" class="event-category">
+
+        <div class="category-heading">
+            <span>01</span>
+            <h2>Academic Events</h2>
+            <p>
+                Recognizing student achievements, academic milestones,
+                and the dedication required to pursue excellence
+                in their chosen fields.
+            </p>
         </div>
 
-      </div>
+        <div class="event-grid">
 
-    </section><!-- /Events Section -->
+            <!-- CMAT PINNING -->
+            <article id="cmat-pinning" class="event-card">
 
-  </main>
+                <div class="event-image">
+                    <img src="images/events/cmat-pinning-2025.jpg"
+                         alt="Students during CMAT Pinning 2025"
+                         loading="lazy">
+                </div>
 
-  <footer id="footer" class="footer position-relative light-background">
+                <div class="event-content">
+                    <span class="event-label">Academic Events</span>
+
+                    <h3>CMAT Pinning 2025</h3>
+
+                    <p>
+                        The Pinning Ceremony of the College of Management,
+                        Accountancy, and Technology celebrates an important
+                        achievement in the students' educational journey.
+                        It recognizes their hard work, determination, and
+                        preparation as they move closer to becoming
+                        responsible professionals and future leaders.
+                    </p>
+
+                </div>
+            </article>
+
+
+            <!-- CRIMINOLOGY RECEPTION RITES -->
+            <article id="criminology-reception"
+                     class="event-card">
+
+                <div class="event-image">
+                    <img src="images/events/criminology-reception-rites.jpg"
+                         alt="Criminology Reception Rites"
+                         loading="lazy">
+                </div>
+
+                <div class="event-content">
+                    <span class="event-label">Academic Events</span>
+
+                    <h3>Criminology Reception Rites</h3>
+
+                    <p>
+                        Guided by discipline, bravery, and unity,
+                        KCC Criminology Class Makisig takes part in
+                        its Reception Rites. This challenging tradition
+                        tests their determination, physical and mental
+                        resilience, and commitment to serving the public.
+                    </p>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- =================================
+         COMMUNITY AND OUTREACH PROGRAMS
+    ================================= -->
+    <section id="community-outreach"
+             class="event-category">
+
+        <div class="category-heading">
+            <span>02</span>
+            <h2>Community And Outreach Programs</h2>
+            <p>
+                Extending care beyond the campus through activities
+                that promote awareness, compassion, social responsibility,
+                and community involvement.
+            </p>
+        </div>
+
+        <div class="event-grid">
+
+            <!-- DINALAGAN -->
+            <article id="dinalagan" class="event-card">
+
+                <div class="event-image">
+                    <img src="images/events/dinalagan-2025.jpg"
+                         alt="DINALAGAN 2025 A Run for Mental Health Awareness"
+                         loading="lazy">
+                </div>
+
+                <div class="event-content">
+                    <span class="event-label">
+                        Community Outreach
+                    </span>
+
+                    <h3>DINALAGAN 2025: A Run for Mental Health Awareness</h3>
+
+                    <p>
+                        On October 11, 2025, the KCC Counseling and Testing
+                        Office organized DINALAGAN 2025, an initiative
+                        dedicated to raising awareness about mental health.
+                        The activity encouraged community members to value
+                        emotional well-being, promote understanding, and
+                        support a healthier lifestyle.
+                    </p>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- =================================
+         SPIRITUAL ACTIVITIES
+    ================================= -->
+    <section id="spiritual-activities"
+             class="event-category">
+
+        <div class="category-heading">
+            <span>03</span>
+            <h2>Spiritual Activities</h2>
+            <p>
+                Strengthening the faith of the KCC community through
+                prayer, thanksgiving, religious celebrations, and
+                meaningful moments of fellowship with God.
+            </p>
+        </div>
+
+        <div class="event-grid">
+
+            <!-- BLESSING OF NEW CEAS BUILDING -->
+            <article id="ceas-building-blessing"
+                     class="event-card">
+
+                <div class="event-image">
+                    <img src="images/events/ceas-building-blessing.jpg"
+                         alt="Blessing of the New CEAS Building"
+                         loading="lazy">
+                </div>
+
+                <div class="event-content">
+                    <span class="event-label">
+                        Spiritual Activities
+                    </span>
+
+                    <h3>Blessing Of The New CEAS Building</h3>
+
+                    <p>
+                        With gratitude for God's blessings, Kabankalan
+                        Catholic College, Inc. celebrated the inauguration
+                        and blessing of its new College of Education,
+                        Arts and Sciences building on January 16, 2026.
+                        The two-storey academic facility, complete with
+                        an integrated swimming pool, represents another
+                        important achievement in the institution's
+                        continuing development.
+                    </p>
+
+                </div>
+            </article>
+
+
+            <!-- BLESSING OF NEW CMAT BUILDING -->
+            <article id="cmat-building-blessing"
+                     class="event-card">
+
+                <div class="event-image">
+                    <img src="images/events/cmat-building-blessing.jpg"
+                         alt="Blessing of the New CMAT Building"
+                         loading="lazy">
+                </div>
+
+                <div class="event-content">
+                    <span class="event-label">
+                        Spiritual Activities
+                    </span>
+
+                    <h3>Blessing Of The New CMAT Building</h3>
+
+                    <p>
+                        The KCC community gathered in thanksgiving
+                        to celebrate the blessing of the new building
+                        for the College of Management, Accountancy,
+                        and Technology. This occasion marks another
+                        meaningful step in providing students and
+                        faculty with improved academic facilities
+                        and learning opportunities.
+                    </p>
+
+                </div>
+            </article>
+
+
+            <!-- HOLY SPIRIT MASS -->
+            <article id="holy-spirit-mass"
+                     class="event-card">
+
+                <div class="event-image">
+                    <img src="images/events/holy-spirit-mass.jpg"
+                         alt="KCC Holy Spirit Mass"
+                         loading="lazy">
+                </div>
+
+                <div class="event-content">
+                    <span class="event-label">
+                        Spiritual Activities
+                    </span>
+
+                    <h3>Holy Spirit Mass</h3>
+
+                    <p>
+                        United in faith and thanksgiving, the Kabankalan
+                        Catholic College community celebrated the Holy
+                        Spirit Mass with the theme, "Come Holy Spirit,
+                        Lead Us, Pilgrims of Hope." Held at the St. Columban
+                        Arts Center, the celebration marked the beginning
+                        of the academic year as students, faculty, and
+                        personnel prayed for divine wisdom and guidance
+                        throughout their journey.
+                    </p>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- =================================
+         SPORTS AND ATHLETICS
+    ================================= -->
+    <section id="sports-athletics"
+             class="event-category">
+
+        <div class="category-heading">
+            <span>04</span>
+            <h2>Sports And Athletics</h2>
+            <p>
+                Celebrating physical excellence, teamwork, discipline,
+                and sportsmanship through athletic competitions and
+                student participation.
+            </p>
+        </div>
+
+        <div class="event-grid">
+
+            <!-- DISTRICT SPORTS MEET -->
+            <article id="district-sports-meet"
+                     class="event-card">
+
+                <div class="event-image">
+                    <img src="images/events/district-sports-meet-2025.jpg"
+                         alt="Opening Program of District Sports Meet 2025"
+                         loading="lazy">
+                </div>
+
+                <div class="event-content">
+                    <span class="event-label">
+                        Sports And Athletics
+                    </span>
+
+                    <h3>District Sports Meet 2025</h3>
+
+                    <p>
+                        Relive the exciting moments from the opening
+                        ceremony of the District Sports Meet 2025,
+                        hosted at the St. Columban Arts Center of
+                        Kabankalan Catholic College, Inc. The event
+                        brought together student-athletes in a
+                        celebration of talent, teamwork, determination,
+                        and friendly competition.
+                    </p>
+
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+
+    <!-- =================================
+         END OF EVENTS SECTION
+    ================================= -->
+
+</section>
+
+    <footer id="footer" class="footer position-relative light-background">
 
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="logo d-flex align-items-center">
-            <span class="sitename">Mentor</span>
+            <span class="sitename">KCC</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Guanzon Street, Kabankalan City</p>
+            <p>Negros Occidental, 6111 Philippines</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>(032) 4712-479</span></p>
+            <p><strong>Email:</strong> <span>kcc_1927@yahoo.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter-x"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-youtube"></i></a>
           </div>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
+          <h4>Quick Links</h4>
           <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Terms of service</a></li>
-            <li><a href="#">Privacy policy</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="courses.html">Academic Programs</a></li>
+            <li><a href="events.html">Campus Events</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
+          <h4>Departments</h4>
           <ul>
-            <li><a href="#">Web Design</a></li>
-            <li><a href="#">Web Development</a></li>
-            <li><a href="#">Product Management</a></li>
-            <li><a href="#">Marketing</a></li>
-            <li><a href="#">Graphic Design</a></li>
+            <li><a href="#">Basic Education</a></li>
+            <li><a href="#">Senior High School</a></li>
+            <li><a href="#">College</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
-          <h4>Our Newsletter</h4>
-          <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
+          <h4>Campus Updates</h4>
+          <p>Stay informed about enrollment schedules, institutional announcements, and upcoming KCC events.</p>
           <form action="#" method="post" class="email-form">
-            <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
+            <div class="newsletter-form"><input type="email" name="email" placeholder="Enter your email"><input type="submit" value="Subscribe"></div>
             <div class="loading">Loading</div>
             <div class="error-message"></div>
             <div class="sent-message">Your subscription request has been sent. Thank you!</div>
@@ -176,16 +564,12 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Mentor</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you've purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> | <a href="https://bootstrapmade.com/tools/">DevTools</a>
-      </div>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Kabankalan Catholic College, Inc.</strong> <span>All Rights Reserved</span></p>
     </div>
 
   </footer>
+   
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
