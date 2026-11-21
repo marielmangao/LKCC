@@ -26,47 +26,6 @@
 
   <!-- Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
-
-  <!-- Custom KCCI Theme Overrides -->
-  <style>
-    :root {
-      --kcci-navy: #0b132b;
-      --kcci-gold: #d4af37;
-    }
-    .hero.dark-background {
-      background-color: var(--kcci-navy);
-    }
-    .timeline-container {
-      border-left: 3px solid var(--kcci-navy);
-      padding-left: 25px;
-      margin-left: 10px;
-    }
-    .timeline-item {
-      position: relative;
-      margin-bottom: 30px;
-    }
-    .timeline-item::before {
-      content: "";
-      position: absolute;
-      left: -34px;
-      top: 5px;
-      width: 15px;
-      height: 15px;
-      border-radius: 50%;
-      background-color: var(--kcci-gold);
-      border: 3px solid var(--kcci-navy);
-    }
-    .timeline-year {
-      display: inline-block;
-      background-color: var(--kcci-navy);
-      color: #ffffff;
-      font-weight: 700;
-      font-size: 0.85rem;
-      padding: 4px 12px;
-      border-radius: 20px;
-      margin-bottom: 8px;
-    }
-  </style>
 </head>
 
 <body class="index-page">
@@ -75,26 +34,16 @@
     <div class="container-fluid container-xl position-relative d-flex align-items-center">
 
       <a href="index.html" class="logo d-flex align-items-center me-auto">
-        <!-- Uncomment and point to your logo file if desired -->
-        <!-- <img src="assets/img/kcci-logo.png" alt="KCCI Logo"> -->
         <h1 class="sitename">KCC</h1>
       </a>
 
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="#about">About &amp; History</a></li>
+          <li><a href="about.html">About</a></li>
           <li><a href="courses.html">Programs</a></li>
-          <li><a href="trainers.html">Administration</a></li>
           <li><a href="events.html">Events</a></li>
-          <li class="dropdown"><a href="#"><span>Admissions</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
-            <ul>
-              <li><a href="#">Basic Education</a></li>
-              <li><a href="#">Senior High School</a></li>
-              <li><a href="#">College Department</a></li>
-              <li><a href="#">Scholarships</a></li>
-            </ul>
-          </li>
+          <li><a href="pricing.html">Pricing</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
@@ -110,14 +59,20 @@
     <!-- Hero Section -->
     <section id="hero" class="hero section dark-background">
 
-      <!-- Point this to the custom #0b132b banner you created -->
-      <img src="assets/img/first.png" alt="Kabankalan Catholic College Banner" data-aos="fade-in">
+      <img src="assets/img/0b132b.png" class="hero-bg" alt="Kabankalan Catholic College Banner" data-aos="fade-in">
 
       <div class="container">
-        <h2 data-aos="fade-up" data-aos-delay="100">Kabankalan Catholic College, Inc.</h2>
-        <p data-aos="fade-up" data-aos-delay="200">Catholic Education: Our Identity, Our Mission.</p>
-        <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
-          <a href="courses.html" class="btn-get-started">Enroll Now!</a>
+        <div class="row align-items-center gy-4">
+          <div class="col-lg-8 text-center text-lg-start">
+            <h2 data-aos="fade-up" data-aos-delay="100">Kabankalan Catholic College, Inc.</h2>
+            <p data-aos="fade-up" data-aos-delay="200">Catholic Education: Our Identity, Our Mission.</p>
+            <div class="d-flex justify-content-center justify-content-lg-start mt-3" data-aos="fade-up" data-aos-delay="300">
+              <a href="courses.html" class="btn-get-started">Enroll Now!</a>
+            </div>
+          </div>
+          <div class="col-lg-4 text-center" data-aos="zoom-in" data-aos-delay="200">
+            <img src="assets/img/seal.png" class="hero-seal img-fluid" alt="Kabankalan Catholic College Seal">
+          </div>
         </div>
       </div>
 
@@ -128,26 +83,25 @@
 
       <div class="container">
 
-        <!-- Mission / Identity Row -->
-        <div class="row gy-4 align-items-center mb-5 pb-4">
+        <div class="row gy-3 align-items-center">
           <div class="col-lg-12 content" data-aos="fade-up" data-aos-delay="100">
             <h3>Rooted in Faith, Committed to Excellence</h3>
-            <p class="fst-italic mt-3">
+            <p class="fst-italic mt-2">
               Kabankalan Catholic College, Inc. is deeply rooted in its Catholic identity and steadfast in upholding the values that define its mission. As an institution, we are committed to providing quality Catholic education that nurtures academic excellence and forms individuals with knowledge, character, and competence, guided by faith and a genuine commitment to serving others. We uphold Catholic education as the very foundation of our identity and the driving force of our mission.
             </p>
-            <div class="row mt-4">
+            <div class="row mt-3 gy-2">
               <div class="col-md-4">
-                <ul class="list-unstyled">
+                <ul class="list-unstyled mb-0">
                   <li><i class="bi bi-check-circle"></i> <span>Quality Catholic education that nurtures academic excellence.</span></li>
                 </ul>
               </div>
               <div class="col-md-4">
-                <ul class="list-unstyled">
+                <ul class="list-unstyled mb-0">
                   <li><i class="bi bi-check-circle"></i> <span>Formation in knowledge, character, and competence, guided by faith.</span></li>
                 </ul>
               </div>
               <div class="col-md-4">
-                <ul class="list-unstyled">
+                <ul class="list-unstyled mb-0">
                   <li><i class="bi bi-check-circle"></i> <span>A genuine commitment to serving others and living Catholic values.</span></li>
                 </ul>
               </div>
@@ -155,190 +109,7 @@
           </div>
         </div>
 
-        <!-- Infographic Roadmap History Section -->
-        <div class="kcci-roadmap-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="100">
-          <div class="section-title text-center">
-            <h2>Our Heritage</h2>
-            <p>A Brief History of Kabankalan Catholic College, Inc.</p>
-            <span class="roadmap-subtitle">Formerly Kabankalan Academy • Est. 1927</span>
-          </div>
-
-          <div class="kcci-roadmap">
-
-            <!-- Item 1 (Text Left, Icon Right) -->
-            <div class="roadmap-step step-left" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-content">
-                <span class="roadmap-year">1927</span>
-                <h4>Founding as Kabankalan Institute</h4>
-                <p>In 1927, a group of incorporators gathered to establish a secondary school named Kabankalan Institute, which was later changed to Kabankalan Private Academy.</p>
-              </div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-building"></i></div>
-              </div>
-              <div class="roadmap-spacer"></div>
-            </div>
-
-            <!-- Item 2 (Icon Left, Text Right) -->
-            <div class="roadmap-step step-right" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-spacer"></div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-mortarboard"></i></div>
-              </div>
-              <div class="roadmap-content">
-                <span class="roadmap-year">1940–1946</span>
-                <h4>First Commencement &amp; The War Years</h4>
-                <p>The first commencement exercises were held in 1940. Classes were suspended during the Second World War (1941–1944) and resumed in SY 1945–1946. A Junior Normal College also opened briefly for three years.</p>
-              </div>
-            </div>
-
-            <!-- Item 3 (Text Left, Icon Right) -->
-            <div class="roadmap-step step-left" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-content">
-                <span class="roadmap-year">1953</span>
-                <h4>Columban Fathers Acquire the Academy</h4>
-                <p>Through Fr. Thomas J. Cronin, parish priest of Kabankalan, the Columban Fathers negotiated to buy Kabankalan Academy, with most stockholders donating their shares in exchange for scholarship privileges.</p>
-              </div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-bank"></i></div>
-              </div>
-              <div class="roadmap-spacer"></div>
-            </div>
-
-            <!-- Item 4 (Icon Left, Text Right) -->
-            <div class="roadmap-step step-right" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-spacer"></div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-geo-alt"></i></div>
-              </div>
-              <div class="roadmap-content">
-                <span class="roadmap-year">Columban Era</span>
-                <h4>Transfer to the Church Site &amp; Directorship</h4>
-                <p>Upon taking over, the Columban Fathers transferred the school site near the church. School directorship was not permanent, rotating alongside the reshuffling of the parish priest.</p>
-              </div>
-            </div>
-
-            <!-- Item 5 (Text Left, Icon Right) -->
-            <div class="roadmap-step step-left" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-content">
-                <span class="roadmap-year">1963–1964</span>
-                <h4>College &amp; Elementary Departments Open</h4>
-                <p>Through Fr. Cronin's efforts, general college and elementary departments opened in SY 1963–1964. Two years later, the St. Paul Sisters of Chartres arrived to assist in management, establishing KCC as southern Negros Occidental's center of learning.</p>
-              </div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-book"></i></div>
-              </div>
-              <div class="roadmap-spacer"></div>
-            </div>
-
-            <!-- Item 6 (Icon Left, Text Right) -->
-            <div class="roadmap-step step-right" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-spacer"></div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-shield-check"></i></div>
-              </div>
-              <div class="roadmap-content">
-                <span class="roadmap-year">1983</span>
-                <h4>Diocesan Administration Begins</h4>
-                <p>Built on a hectare of land donated by the Zayco family, the College saw administration shift in 1983 from the Sisters of St. Paul to Diocesan priests headed by Msgr. Josefino I. Iledan as President, assisted by the Presentation Sisters.</p>
-              </div>
-            </div>
-
-            <!-- Item 7 (Text Left, Icon Right) -->
-            <div class="roadmap-step step-left" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-content">
-                <span class="roadmap-year">1987</span>
-                <h4>The Great Fire &amp; Reconstruction</h4>
-                <p>On March 14, 1987, a fire razed the high school building, parish convent, and Old Catholic church. Immediate rehabilitation relocated the high school temporarily to the College campus while a new three-storey building rose on an adjacent lot.</p>
-              </div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-fire"></i></div>
-              </div>
-              <div class="roadmap-spacer"></div>
-            </div>
-
-            <!-- Item 8 (Icon Left, Text Right) -->
-            <div class="roadmap-step step-right" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-spacer"></div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-buildings"></i></div>
-              </div>
-              <div class="roadmap-content">
-                <span class="roadmap-year">Expansion</span>
-                <h4>St. Columban Arts Center &amp; Annex</h4>
-                <p>The campus expanded with the St. Columban Arts Center—a socio-cultural venue for students and the community—and the concrete annex housing the canteen, textbook center, and College library.</p>
-              </div>
-            </div>
-
-            <!-- Item 9 (Text Left, Icon Right) -->
-            <div class="roadmap-step step-left" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-content">
-                <span class="roadmap-year">1988</span>
-                <h4>New Diocese &amp; Good Shepherd Sisters</h4>
-                <p>Kabankalan became a new Diocese in 1988 under First Bishop Most Rev. Vicente M. Navarra, D.D. The Religious of the Good Shepherd served for a year, followed by eight years of senior academic leadership by lay members.</p>
-              </div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-award"></i></div>
-              </div>
-              <div class="roadmap-spacer"></div>
-            </div>
-
-            <!-- Item 10 (Icon Left, Text Right) -->
-            <div class="roadmap-step step-right" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-spacer"></div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-people"></i></div>
-              </div>
-              <div class="roadmap-content">
-                <span class="roadmap-year">1996</span>
-                <h4>Carmelite Sisters Invited</h4>
-                <p>In 1996, Bishop Vicente Navarra, D.D., as Chairman of the Board of Trustees, invited the Carmelite Sisters of Our Lady (Carm.O.L.) to assist School President Msgr. Rogelio B. Cruz in school management.</p>
-              </div>
-            </div>
-
-            <!-- Item 11 (Text Left, Icon Right) -->
-            <div class="roadmap-step step-left" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-content">
-                <span class="roadmap-year">2003–2011</span>
-                <h4>Bishop Buzon's Era &amp; New Leadership</h4>
-                <p>Installed as second Bishop in 2003 and serving as School President in 2005, Most Rev. Patricio A. Buzon, SDB, D.D. established the KCC-Technological Center in Brgy. Talubangi in 2009. In 2011, Rev. Fr. Radny T. Bayog, PhD was appointed School President.</p>
-              </div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-cpu"></i></div>
-              </div>
-              <div class="roadmap-spacer"></div>
-            </div>
-
-            <!-- Item 12 (Icon Left, Text Right) -->
-            <div class="roadmap-step step-right" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-spacer"></div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-person-badge"></i></div>
-              </div>
-              <div class="roadmap-content">
-                <span class="roadmap-year">2018–2019</span>
-                <h4>Bishop Galbines &amp; First Alumnus President</h4>
-                <p>Most Rev. Louie P. Galbines, SThD, D.D. was installed as third Bishop of Kabankalan in 2018. In 2019, Rev. Fr. Eugene D. Lucerna II, PhD, RPsy, RGC (KCC High School Batch 1996) became the first alumnus appointed as School President.</p>
-              </div>
-            </div>
-
-            <!-- Item 13 (Text Left, Icon Right) -->
-            <div class="roadmap-step step-left step-last" data-aos="fade-up" data-aos-delay="100">
-              <div class="roadmap-content">
-                <span class="roadmap-year">2025</span>
-                <h4>Fr. Richard L. Lachica Appointed</h4>
-                <p>On April 15, 2025, Bishop Galbines appointed Rev. Fr. Richard L. Lachica, MAEd as the new School President starting Academic Year 2025–2026.</p>
-              </div>
-              <div class="roadmap-node">
-                <div class="node-circle"><i class="bi bi-stars"></i></div>
-              </div>
-              <div class="roadmap-spacer"></div>
-            </div>
-
-          </div>
-        </div>
-
       </div>
-
     </section><!-- /About & History Section -->
 
     <!-- Why Us Section -->
@@ -347,21 +118,21 @@
         <div class="row gy-4">
 
           <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="why-box" style="background-color: #0b132b;">
-              <h3>Why Choose KCCI</h3>
+            <div class="why-box h-100">
+              <h3>Why Choose KCC</h3>
               <p>
                 For nearly a century, Kabankalan Catholic College, Inc. has stood as a pillar of faith-based learning in Southern Negros Occidental, forming graduates who excel professionally and serve their communities with integrity.
               </p>
               <div class="text-center">
-                <a href="#about" class="more-btn"><span>Read Our History</span> <i class="bi bi-chevron-right"></i></a>
+                <a href="about.html" class="more-btn"><span>Read Our History</span> <i class="bi bi-chevron-right"></i></a>
               </div>
             </div>
           </div>
 
           <div class="col-lg-8 d-flex align-items-stretch">
-            <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="row gy-4 w-100" data-aos="fade-up" data-aos-delay="200">
 
-              <div class="col-xl-4">
+              <div class="col-md-4">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-book"></i>
                   <h4>Academic Excellence</h4>
@@ -369,7 +140,7 @@
                 </div>
               </div>
 
-              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-heart"></i>
                   <h4>Christ-Centered Values</h4>
@@ -377,7 +148,7 @@
                 </div>
               </div>
 
-              <div class="col-xl-4" data-aos="fade-up" data-aos-delay="400">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="400">
                 <div class="icon-box d-flex flex-column justify-content-center align-items-center">
                   <i class="bi bi-people"></i>
                   <h4>Service &amp; Leadership</h4>
@@ -392,39 +163,87 @@
       </div>
     </section><!-- /Why Us Section -->
 
+    <!-- Counts Section -->
+    <section id="counts" class="section counts light-background">
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="counts-heading text-center mb-4">
+          <span class="counts-kicker">KCC LEGACY</span>
+          <h2>A Tradition of Excellence, Faith and Service, Measured in Numbers.</h2>
+          <div class="counts-divider"></div>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <div class="stat-number">
+                <span data-purecounter-start="0" data-purecounter-end="4000" data-purecounter-duration="1" class="purecounter">4000</span><span class="stat-suffix">+</span>
+              </div>
+              <p>Students</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <div class="stat-number">
+                <span data-purecounter-start="0" data-purecounter-end="32" data-purecounter-duration="1" class="purecounter">32</span><span class="stat-suffix">+</span>
+              </div>
+              <p>Programs</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <div class="stat-number">
+                <span data-purecounter-start="0" data-purecounter-end="99" data-purecounter-duration="1" class="purecounter">99</span><span class="stat-suffix"> Yrs</span>
+              </div>
+              <p>Years of Excellence</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-6">
+            <div class="stats-item text-center w-100 h-100">
+              <div class="stat-number">
+                <span data-purecounter-start="0" data-purecounter-end="1927" data-purecounter-duration="1" data-purecounter-separator="false" class="purecounter">1927</span>
+              </div>
+              <p>Year Founded</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Counts Section -->
+
     <!-- Academic Colleges & Departments Section -->
     <section id="features" class="features section">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Academics</h2>
-        <p>Colleges &amp; Departments</p>
+      <div class="container section-title text-center" data-aos="fade-up">
+        <h2 class="pathway-heading">Discover Your Learning Pathways at KCC</h2>
+        <p>Education at Every Level</p>
       </div>
 
       <div class="container">
-        <div class="row gy-4">
+        <div class="row gy-4 justify-content-center">
 
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-            <div class="features-item">
+          <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="features-item justify-content-center text-center">
               <i class="bi bi-book"></i>
-              <h3><a href="courses.html" class="stretched-link">Elementary</a></h3>
+              <h3><a href="courses.html" class="stretched-link">Basic Education</a></h3>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-            <div class="features-item">
+          <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="features-item justify-content-center text-center">
               <i class="bi bi-journal-text"></i>
-              <h3><a href="courses.html" class="stretched-link">Junior High School</a></h3>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-            <div class="features-item">
-              <i class="bi bi-award"></i>
               <h3><a href="courses.html" class="stretched-link">Senior High School</a></h3>
             </div>
           </div>
 
-          <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="400">
-            <div class="features-item">
+          <div class="col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="features-item justify-content-center text-center">
               <i class="bi bi-mortarboard"></i>
               <h3><a href="courses.html" class="stretched-link">Colleges</a></h3>
             </div>
@@ -433,6 +252,80 @@
         </div>
       </div>
     </section><!-- /Academic Colleges & Departments Section -->
+
+    <!-- A Glimpse of KCC Section -->
+    <section id="glimpse-kcc" class="section why-us">
+      <div class="container">
+
+        <div class="row gy-4 align-items-center">
+
+          <!-- Left Side: Heading and Description -->
+          <div class="col-lg-4" data-aos="fade-up">
+            <div class="why-box">
+              <h3>A Glimpse of KCC</h3>
+              <p>
+                Life at Kabankalan Catholic College is filled with meaningful experiences, lasting friendships, and opportunities to grow. From engaging classroom activities to exciting school events, students discover their talents, build confidence, strengthen their faith, and create unforgettable memories while becoming responsible and compassionate individuals.
+              </p>
+
+              <div class="text-center">
+                <a href="about.html#testimonials" class="more-btn">
+                  <span>View Campus</span>
+                  <i class="bi bi-chevron-right"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Side: Photo Carousel -->
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
+
+            <div id="kccCarousel" class="carousel slide" data-bs-ride="carousel">
+
+              <div class="carousel-inner rounded">
+
+                <div class="carousel-item active">
+                  <img src="assets/img/kcc1.jpg" class="d-block w-100" alt="KCC Campus">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="assets/img/kcc2.jpg" class="d-block w-100" alt="KCC Students">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="assets/img/kcc3.jpg" class="d-block w-100" alt="KCC Activities">
+                </div>
+
+                <div class="carousel-item">
+                  <img src="assets/img/kcc4.jpg" class="d-block w-100" alt="KCC Community">
+                </div>
+
+              </div>
+
+              <button class="carousel-control-prev" type="button" data-bs-target="#kccCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+
+              <button class="carousel-control-next" type="button" data-bs-target="#kccCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#kccCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+                <button type="button" data-bs-target="#kccCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#kccCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#kccCarousel" data-bs-slide-to="3"></button>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+    <!-- /A Glimpse of KCC Section -->
 
   </main>
 
@@ -447,8 +340,8 @@
           <div class="footer-contact pt-3">
             <p>Guanzon Street, Kabankalan City</p>
             <p>Negros Occidental, 6111 Philippines</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>(034) 471-2479</span></p>
-            <p><strong>Email:</strong> <span>info@kcc.edu.ph</span></p>
+            <p class="mt-3"><strong>Phone:</strong> <span>(032) 4712-479</span></p>
+            <p><strong>Email:</strong> <span>kcc_1927@yahoo.com</span></p>
           </div>
           <div class="social-links d-flex mt-4">
             <a href="#"><i class="bi bi-facebook"></i></a>
@@ -460,27 +353,26 @@
           <h4>Quick Links</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="#about">About &amp; History</a></li>
+            <li><a href="#about">About</a></li>
             <li><a href="courses.html">Academic Programs</a></li>
             <li><a href="events.html">Campus Events</a></li>
             <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="pricing.html">Pricing</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Departments</h4>
           <ul>
-            <li><a href="#">Elementary</a></li>
-            <li><a href="#">Junior High School</a></li>
+            <li><a href="#">Basic Education</a></li>
             <li><a href="#">Senior High School</a></li>
             <li><a href="#">College</a></li>
-            <li><a href="#">KCC-Tech Center</a></li>
           </ul>
         </div>
 
         <div class="col-lg-4 col-md-12 footer-newsletter">
           <h4>Campus Updates</h4>
-          <p>Stay informed about enrollment schedules, institutional announcements, and upcoming KCCI events.</p>
+          <p>Stay informed about enrollment schedules, institutional announcements, and upcoming KCC events.</p>
           <form action="#" method="post" class="email-form">
             <div class="newsletter-form"><input type="email" name="email" placeholder="Enter your email"><input type="submit" value="Subscribe"></div>
             <div class="loading">Loading</div>
@@ -494,9 +386,6 @@
 
     <div class="container copyright text-center mt-4">
       <p>© <span>Copyright</span> <strong class="px-1 sitename">Kabankalan Catholic College, Inc.</strong> <span>All Rights Reserved</span></p>
-      <div class="credits">
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
     </div>
 
   </footer>
