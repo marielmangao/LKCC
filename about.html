@@ -4,13 +4,13 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>About - KCC (Kabankalan Catholic College, Inc.)</title>
-  <meta name="description" content="Learn about Kabankalan Catholic College, Inc. (KCC), its seal, vision and mission, history, core values, and campus places.">
-  <meta name="keywords" content="Kabankalan Catholic College, KCC, About KCC, Vision and Mission, KCC Seal, KCC Core Values">
+  <title>About - Kabankalan Catholic College, Inc.</title>
+  <meta name="description" content="Official website of Kabankalan Catholic College, Inc. - Catholic Education: Our Identity, Our Mission.">
+  <meta name="keywords" content="Kabankalan Catholic College, KCC, INC., Catholic Education, Kabankalan City">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/seal.png" rel="icon">
+  <link href="assets/img/seal.png" rel="seal">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -40,15 +40,23 @@
       <nav id="navmenu" class="navmenu">
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html" class="active">About</a></li>
-          <li><a href="academics.html">Academics</a></li>
+          <li class="dropdown"><a href="about.html" class="active"><span>About</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="about.html#seal">KCC Seal</a></li>
+              <li><a href="about.html#vision-mission">Vision and Mission</a></li>
+              <li><a href="about.html#history-roadmap">History</a></li>
+              <li><a href="about.html#core-values">Core Values</a></li>
+              <li><a href="about.html#places">Campus</a></li>
+            </ul>
+          </li>
+          <li><a href="academics.html">Academic</a></li>
           <li><a href="events.html">Events</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="courses.html">Get Started</a>
+      <a class="btn-getstarted" href="academics.html#">Get Started</a>
 
     </div>
   </header>
@@ -87,7 +95,7 @@
     </section>
 
     <!-- ABOUT KCC SEAL SECTION -->
-    <section id="about-us" class="section about-us">
+    <section id="seal" class="section about-us">
 
       <div class="seal-container">
 
@@ -559,7 +567,7 @@
     </section>
 
     <!-- Campus Places Section -->
-    <section id="testimonials" class="testimonials section">
+    <section id="places" class="testimonials section">
 
       <!-- Section Title -->
       <div class="container section-title text-center" data-aos="fade-up">
@@ -686,7 +694,7 @@
           </div>
           <div class="social-links d-flex mt-4">
             <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-email"></i></a>
           </div>
         </div>
 
@@ -695,19 +703,18 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Academic Programs</a></li>
+            <li><a href="academics.html">Academic Programs</a></li>
             <li><a href="events.html">Campus Events</a></li>
             <li><a href="contact.html">Contact Us</a></li>
-            <li><a href="pricing.html">Pricing</a></li>
           </ul>
         </div>
 
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Departments</h4>
           <ul>
-            <li><a href="#">Basic Education</a></li>
-            <li><a href="#">Senior High School</a></li>
-            <li><a href="#">College</a></li>
+            <li><a href="academics.html#basic-education">Basic Education</a></li>
+            <li><a href="academics.html#senior-high-school">Senior High School</a></li>
+            <li><a href="academics.html#college-programs">College</a></li>
           </ul>
         </div>
 
@@ -730,6 +737,7 @@
     </div>
 
   </footer>
+
 
   <!-- Scroll Top -->
   <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

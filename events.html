@@ -5,12 +5,12 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Events - Kabankalan Catholic College, Inc.</title>
-  <meta name="description" content="Explore future awaited events and campus activities at Kabankalan Catholic College, Inc.">
-  <meta name="keywords" content="Kabankalan Catholic College, KCC, INC., Events, Campus Activities">
+  <meta name="description" content="Official website of Kabankalan Catholic College, Inc. - Catholic Education: Our Identity, Our Mission.">
+  <meta name="keywords" content="Kabankalan Catholic College, KCC, INC., Catholic Education, Kabankalan City">
 
   <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/seal.png" rel="icon">
+  <link href="assets/img/seal.png" rel="apple-touch-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
@@ -42,11 +42,20 @@
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="academics.html">Academics</a></li>
-          <li><a href="events.html" class="active">Events</a></li>
+          <li class="dropdown"><a href="events.html" class="active"><span>Events</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="events.html#featured-events">Future Awaited Events</a></li>
+              <li><a href="events.html#academic-events">Academic Events</a></li>
+              <li><a href="events.html#community-outreach">Community &amp; Outreach</a></li>
+              <li><a href="events.html#spiritual-activities">Spiritual Activities</a></li>
+              <li><a href="events.html#sports-athletics">Sports &amp; Athletics</a></li>
+            </ul>
+          </li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
+
     </div>
   </header>
 
@@ -67,84 +76,92 @@
     </div><!-- End Page Title -->
 
     <!-- =================================
-         FUTURE AWAITED EVENTS & ACTIVITIES
+         FUTURE AWAITED EVENTS & CATEGORIES
     ================================= -->
     <section id="events" class="events-section">
 
-      <div class="events-heading">
+      <div class="events-heading" data-aos="fade-up">
         <span class="events-kicker">UPCOMING &amp; ANTICIPATED</span>
-        <h1>Future Awaited Events</h1>
+        <h2>Future Awaited Events</h2>
         <p>
           Look ahead to the upcoming celebrations, milestones, and community gatherings awaiting the KCC family.
         </p>
       </div>
 
       <!-- =================================
-           FUTURE AWAITED EVENTS CAROUSEL
+           FUTURE AWAITED EVENTS SWIPER CAROUSEL
+           (Matches About page Swiper carousel)
       ================================= -->
-      <section id="featured-events" class="featured-events" aria-label="Future Awaited Events">
+      <section id="featured-events" class="featured-events" aria-label="Future Awaited Events" data-aos="fade-up" data-aos-delay="100">
+        <div class="container">
 
-        <div class="carousel-container" id="futureEventsCarousel">
+          <div class="swiper init-swiper">
+            <script type="application/json" class="swiper-config">
+              {
+                "loop": true,
+                "speed": 600,
+                "autoplay": {
+                  "delay": 5000
+                },
+                "slidesPerView": "auto",
+                "pagination": {
+                  "el": ".swiper-pagination",
+                  "type": "bullets",
+                  "clickable": true
+                },
+                "breakpoints": {
+                  "320": {
+                    "slidesPerView": 1,
+                    "spaceBetween": 24
+                  },
+                  "1200": {
+                    "slidesPerView": 2,
+                    "spaceBetween": 24
+                  }
+                }
+              }
+            </script>
 
-          <div class="carousel-track" id="eventCarousel">
+            <div class="swiper-wrapper">
 
-            <!-- SLIDE 1 -->
-            <div class="carousel-slide active">
-              <img src="assets/img/event/red.png"
-                   alt="Upcoming Spritual Activities">
-
-              <div class="carousel-overlay">
-                <span>AWAITED • SPIRITUAL GATHERING/span>
-                <h2>Upcoming Spiritual Gathering</h2>
-                <p>
-                  Anticipating the Red Wednesday Mass this 25th of November.
-                </p>
+              <div class="swiper-slide">
+                <div class="place-card">
+                  <img src="assets/img/event/red.png" class="place-img" alt="Red Wednesday Mass">
+                  <div class="place-body">
+                    <span class="event-label">Awaited &bull; Spiritual Gathering</span>
+                    <h3>Red Wednesday Mass</h3>
+                    <p>Anticipating the Red Wednesday Mass on November 25 as the KCC community unites in prayer and solidarity.</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-            <!-- SLIDE 2 -->
-            <div class="carousel-slide active">
-              <img src="assets/img/event/funlight.png"
-                   alt="Upcoming Spritual Activities">
-
-              <div class="carousel-overlay">
-                <span>AWAITED • SPIRITUAL GATHERING/span>
-                <h2>Upcoming Spiritual Gathering</h2>
-                <p>
-                  Anticipating Fun-Light that inspires faith.
-                </p>
+              <div class="swiper-slide">
+                <div class="place-card">
+                  <img src="assets/img/event/funlight.png" class="place-img" alt="Fun-Light Gathering">
+                  <div class="place-body">
+                    <span class="event-label">Awaited &bull; Spiritual Gathering</span>
+                    <h3>Fun-Light Gathering</h3>
+                    <p>Anticipating Fun-Light this 2nd of Dec,5pm at St.Columban Arts Center, an inspiring evening of fellowship, joy, and faith-filled celebration.</p>
+                  </div>
+                </div>
               </div>
-            </div>
 
-          </div>
-          <!-- CAROUSEL INDICATORS -->
-          <div class="carousel-indicators" id="carouselIndicators">
-            <button type="button" class="indicator active"
-                    aria-label="Show awaited event 1"></button>
-            <button type="button" class="indicator"
-                    aria-label="Show awaited event 2"></button>
-            <button type="button" class="indicator"
-                    aria-label="Show awaited event 3"></button>
-            <button type="button" class="indicator"
-                    aria-label="Show awaited event 4"></button>
+            </div>
+            <div class="swiper-pagination"></div>
           </div>
 
         </div>
       </section>
 
       <!-- =================================
-           ACADEMIC EVENTS
+           01. ACADEMIC EVENTS
       ================================= -->
-      <section id="academic-events" class="event-category">
+      <section id="academic-events" class="event-category" data-aos="fade-up">
 
         <div class="category-heading">
           <span>01</span>
           <h2>Academic Events</h2>
-          <p>
-            Recognizing student achievements, academic milestones,
-            and the dedication required to pursue excellence
-            in their chosen fields.
-          </p>
+          <p>Celebrating academic excellence, student achievements, and educational milestones through ceremonies and gatherings.</p>
         </div>
 
         <div class="event-grid">
@@ -152,9 +169,7 @@
           <!-- CMAT PINNING -->
           <article id="cmat-pinning" class="event-card">
             <div class="event-image">
-             <img src="assets/img/event/pinning.png"
-                   alt="Students during CMAT Pinning 2025"
-                   loading="lazy">
+              <img src="assets/img/event/pinning.png" alt="Students during CMAT Pinning 2025" loading="lazy">
             </div>
             <div class="event-content">
               <span class="event-label">Academic Events</span>
@@ -173,9 +188,7 @@
           <!-- CRIMINOLOGY RECEPTION RITES -->
           <article id="criminology-reception" class="event-card">
             <div class="event-image">
-              <img src="assets/img/event/crim.png"
-                   alt="Criminology Reception Rites"
-                   loading="lazy">
+              <img src="assets/img/event/crim.png" alt="Criminology Reception Rites" loading="lazy">
             </div>
             <div class="event-content">
               <span class="event-label">Academic Events</span>
@@ -194,9 +207,9 @@
       </section>
 
       <!-- =================================
-           COMMUNITY AND OUTREACH PROGRAMS
+           02. COMMUNITY AND OUTREACH PROGRAMS
       ================================= -->
-      <section id="community-outreach" class="event-category">
+      <section id="community-outreach" class="event-category" data-aos="fade-up">
 
         <div class="category-heading">
           <span>02</span>
@@ -213,9 +226,7 @@
           <!-- DINALAGAN -->
           <article id="dinalagan" class="event-card">
             <div class="event-image">
-             <img src="assets/img/event/dalagan.png"
-                   alt="DINALAGAN 2025 A Run for Mental Health Awareness"
-                   loading="lazy">
+              <img src="assets/img/event/dalagan.png" alt="DINALAGAN 2025 A Run for Mental Health Awareness" loading="lazy">
             </div>
             <div class="event-content">
               <span class="event-label">Community Outreach</span>
@@ -235,9 +246,9 @@
       </section>
 
       <!-- =================================
-           SPIRITUAL ACTIVITIES
+           03. SPIRITUAL ACTIVITIES
       ================================= -->
-      <section id="spiritual-activities" class="event-category">
+      <section id="spiritual-activities" class="event-category" data-aos="fade-up">
 
         <div class="category-heading">
           <span>03</span>
@@ -254,9 +265,7 @@
           <!-- BLESSING OF NEW CEAS BUILDING -->
           <article id="ceas-building-blessing" class="event-card">
             <div class="event-image">
-             <img src="assets/img/event/ceas.png"
-                   alt="Blessing of the New CEAS Building"
-                   loading="lazy">
+              <img src="assets/img/event/ceas.png" alt="Blessing of the New CEAS Building" loading="lazy">
             </div>
             <div class="event-content">
               <span class="event-label">Spiritual Activities</span>
@@ -277,9 +286,7 @@
           <!-- BLESSING OF NEW CMAT BUILDING -->
           <article id="cmat-building-blessing" class="event-card">
             <div class="event-image">
-              <img src="assets/img/event/cmat.png"
-                   alt="Blessing of the New CMAT Building"
-                   loading="lazy">
+              <img src="assets/img/event/cmat.png" alt="Blessing of the New CMAT Building" loading="lazy">
             </div>
             <div class="event-content">
               <span class="event-label">Spiritual Activities</span>
@@ -299,9 +306,7 @@
           <!-- HOLY SPIRIT MASS -->
           <article id="holy-spirit-mass" class="event-card">
             <div class="event-image">
-              <img src="assets/img/event/holyspirit.png"
-                   alt="KCC Holy Spirit Mass"
-                   loading="lazy">
+              <img src="assets/img/event/holyspirit.png" alt="KCC Holy Spirit Mass" loading="lazy">
             </div>
             <div class="event-content">
               <span class="event-label">Spiritual Activities</span>
@@ -323,9 +328,9 @@
       </section>
 
       <!-- =================================
-           SPORTS AND ATHLETICS
+           04. SPORTS AND ATHLETICS
       ================================= -->
-      <section id="sports-athletics" class="event-category">
+      <section id="sports-athletics" class="event-category" data-aos="fade-up">
 
         <div class="category-heading">
           <span>04</span>
@@ -342,9 +347,7 @@
           <!-- DISTRICT SPORTS MEET -->
           <article id="district-sports-meet" class="event-card">
             <div class="event-image">
-              <img src="assets/img/event/district.png"
-                   alt="Opening Program of District Sports Meet 2025"
-                   loading="lazy">
+              <img src="assets/img/event/district.png" alt="Opening Program of District Sports Meet 2025" loading="lazy">
             </div>
             <div class="event-content">
               <span class="event-label">Sports And Athletics</span>
@@ -384,7 +387,7 @@
           </div>
           <div class="social-links d-flex mt-4">
             <a href="#"><i class="bi bi-facebook"></i></a>
-            <a href="#"><i class="bi bi-youtube"></i></a>
+            <a href="#"><i class="bi bi-envelope"></i></a>
           </div>
         </div>
 
@@ -393,7 +396,7 @@
           <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
-            <li><a href="courses.html">Academic Programs</a></li>
+            <li><a href="academics.html">Academic Programs</a></li>
             <li><a href="events.html">Campus Events</a></li>
             <li><a href="contact.html">Contact Us</a></li>
           </ul>
@@ -402,9 +405,9 @@
         <div class="col-lg-2 col-md-3 footer-links">
           <h4>Departments</h4>
           <ul>
-            <li><a href="#">Basic Education</a></li>
-            <li><a href="#">Senior High School</a></li>
-            <li><a href="#">College</a></li>
+            <li><a href="academics.html#basic-education">Basic Education</a></li>
+            <li><a href="academics.html#senior-high-school">Senior High School</a></li>
+            <li><a href="academics.html#college-programs">College</a></li>
           </ul>
         </div>
 
